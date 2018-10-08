@@ -1,11 +1,10 @@
-const domain = 'http://localhost:3000';
+const domain = 'https://khanhtrancse.github.io/my-blog';
 export default {
     DOMAIN: domain,
     PATH: {
-        HOME: '/',
+        HOME:  '/',
         ABOUT: '/about',
         TECHNICAL: '/technical',
         BUSINESS: '/business',
     }
-
 }
