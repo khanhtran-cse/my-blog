@@ -64,6 +64,7 @@ export default class extends React.Component {
         const moveView = <div key={2} className="col-12 d-flex justify-content-center row mx-0 mb-5">{move}</div>
         // console.log(posts);
         this.setState({ data: [list, moveView], totalPage: result.totalPage, page: page });
+        window.scrollTo(0, 0)
     }
 
     render() {
