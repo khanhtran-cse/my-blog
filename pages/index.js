@@ -1,20 +1,15 @@
 import React from 'react';
-import Container from '../component/container';
 import Lan from '../modules/language';
+import Data from '../data/post';
+import ListCard from '../component/list-card';
 
 export default class extends React.Component {
-    componentDidMount() {
-
-    }
-
+  
     render() {
         return (
-            <div>
-                <Container
-                title={Lan.t('blog_name')}>
-                    <p>This is the list of the latest posts.</p>
-                </Container>
-            </div>
+            <ListCard
+                title={Lan.t('blog_name')}
+                getData={(page)=>Data.getLatestPosts(page)}/>
 
         );
     }

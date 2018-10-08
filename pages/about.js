@@ -1,12 +1,9 @@
 import React from 'react';
 import Container from '../component/container';
 import Lan from '../modules/language';
+import NoData from '../component/no-data';
 
 export default class extends React.Component {
-    state = {
-        isLoading: true,
-    }
-
     componentDidMount() {
 
     }
@@ -17,7 +14,7 @@ export default class extends React.Component {
                 <Container
                     title={Lan.t('about_me')}
                 >
-                    <p>This is test paragraph</p>
+                    <NoData/>
                 </Container>
             </div>
 

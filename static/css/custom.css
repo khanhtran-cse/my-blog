@@ -10,6 +10,9 @@
     1. Sidebar
     2. Navbar
     3. Main container
+    4. Post card
+    5. Loader
+    6. No data
 */
 
 /*
@@ -108,8 +111,6 @@ a:hover{
 
 .main{
     margin-left: 250px;
-    background-color: green;
-    height: 200px;
 }
 
 @media only screen and (min-width: 64.063em){
@@ -125,3 +126,114 @@ a:hover{
         margin-top: 3em;
     }
   }
+
+/*
+4. Post card
+*/
+.post-card{
+  position: relative;
+}
+
+.post-card-image-block{
+  width: 100%;
+}
+.post-card-image{
+  display: block;
+  width: 100%;
+  background-repeat: no-repeat !important;
+  background-position: 50% !important;
+  background-size: cover !important;
+  padding-top: 66.6%;
+}
+
+.post-card-time{
+  font-size: 12px;
+  line-height: 22px;
+  color: #7E7E7E;
+}
+.post-card-separator{
+  position: absolute;
+  bottom: 0px;
+  left: 0.5em;
+  right: 0.5em;
+}
+
+/*
+  5. Loader
+*/
+.loader{
+  height: 500px;
+}
+
+.lds-heart {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  transform: rotate(45deg);
+  transform-origin: 32px 32px;
+}
+.lds-heart div {
+  top: 23px;
+  left: 19px;
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  background: rgb(230, 17, 17);
+  animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.lds-heart div:after,
+.lds-heart div:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 2em;
+  height: 2em;
+  background: rgb(230, 7, 7);
+}
+.lds-heart div:before {
+  left: -17px;
+  border-radius: 50% 0 0 50%;
+}
+.lds-heart div:after {
+  top: -17px;
+  border-radius: 50% 50% 0 0;
+}
+@keyframes lds-heart {
+  0% {
+    transform: scale(0.95);
+  }
+  5% {
+    transform: scale(1.1);
+  }
+  39% {
+    transform: scale(0.85);
+  }
+  45% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+/*
+6. No data
+*/
+.no-data{
+  height: 500px;
+}
+
+.no-data-image{
+  width: 10em;
+  height: 10em;
+  margin-bottom: 3em;
+}
+
+.no-data-title{
+  color: #7E7E7E;
+  text-align: center;
+}

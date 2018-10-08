@@ -7,5 +7,7 @@ export default {
         TECHNICAL: prefix + '/technical',
         BUSINESS: prefix + '/business',
         STATIC: prefix + '/static',
-    }
+        POST: prefix + '/post'
+    },
+    NUMBER_POST_PER_PAGE: 8,
 }

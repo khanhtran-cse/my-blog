@@ -1,25 +1,15 @@
 import React from 'react';
-import Container from '../component/container';
 import Lan from '../modules/language';
+import Data from '../data/post';
+import ListCard from '../component/list-card';
 
 export default class extends React.Component {
-    state = {
-        isLoading: true,
-    }
-
-    componentDidMount() {
-
-    }
-
+  
     render() {
         return (
-            <div>
-                <Container
-                    title={Lan.t('technical_post')}
-                >
-                    <p>List of technical posts</p>
-                </Container>
-            </div>
+            <ListCard
+                title={Lan.t('technical_post')}
+                getData={(page)=>Data.getPostsByCategory('technical',page)}/>
 
         );
     }

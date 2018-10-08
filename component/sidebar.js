@@ -17,34 +17,34 @@ const social = [
 export default () => {
     const actionLinks = actions.map(item =>
         <Link key={item.key} href={item.ref}>
-            <a class="menu-item my-2">{item.name}</a>
+            <a className="menu-item my-2">{item.name}</a>
         </Link>)
 
     const socialLinks = social.map(item =>
-        <a key={item.key} class="mx-2" href={item.ref}>
-            <i class={item.name}></i>
+        <a key={item.key} className="mx-2" href={item.ref}>
+            <i className={item.name}></i>
         </a>
     );
 
     return (
-        <div class="sidebar">
-            <div class="col-12 side-bar-center">
+        <div className="sidebar">
+            <div className="col-12 side-bar-center">
                 {/*Logo*/}
-                <div class="d-flex flex-column">
-                    <h5 class="mx-auto">
-                        <a class="blog-name" href={Config.PATH.HOME}>{Lan.t('blog_name')}</a>
+                <div className="d-flex flex-column">
+                    <h5 className="mx-auto">
+                        <a className="blog-name" href={Config.PATH.HOME}>{Lan.t('blog_name')}</a>
                     </h5>
 
-                    <div class="blog-description mx-auto">{Lan.t('blog_description')}</div>
+                    <div className="blog-description mx-auto">{Lan.t('blog_description')}</div>
                 </div>
                 <hr/>
-                <div class="d-flex justify-content-center">
+                <div className="d-flex justify-content-center">
                     <div>
                     {actionLinks}
                     </div>
                 </div>
                 <hr/>
-                <div class="d-flex flex-row justify-content-center">
+                <div className="d-flex flex-row justify-content-center">
                     {socialLinks}
                 </div>
             </div>

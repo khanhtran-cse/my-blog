@@ -5,12 +5,19 @@ import SideBar from '../component/sidebar'
 import Config from '../config';
 
 export default class extends React.Component {
-    state = {
-        isLoading: true,
+    constructor(props) {
+        super(props);
+
+        // console.log(props);
+        const noData = !props.children || props.children == {} || props.children.length == 0;
+        this.state = { isLoading: noData };
     }
 
-    componentDidMount() {
-        setTimeout(() => this.setState({ isLoading: false, }), 1000)
+    componentWillReceiveProps(nextProps) {
+        // console.log(nextProps);
+        const noData = !nextProps.children || nextProps.children == {} ||
+            nextProps.children.length == 0;
+        this.setState({ isLoading: noData });
     }
 
     render() {
@@ -36,9 +43,12 @@ export default class extends React.Component {
                 <SideBar />
 
                 <Navigation />
-                <div class="main">
+                <div className="main pt-3">
                     {this.state.isLoading ?
-                        <p>Loading</p> :
+                        <div className="loader d-flex justify-content-center align-items-center">
+                            <div className="lds-heart"><div></div></div>
+                        </div>
+                        :
                         this.props.children}
                 </div >
 

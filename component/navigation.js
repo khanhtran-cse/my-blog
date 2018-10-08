@@ -22,38 +22,38 @@ export default () => {
         </div>)
 
     const socialLinks = social.map(item =>
-        <div key={item.key} class="mx-2">
+        <div key={item.key} className="mx-2">
             <a href={item.ref}>
-                <i class={item.name}></i>
+                <i className={item.name}></i>
             </a>
         </div>
     );
 
     return (
-        <nav class="navbar custom-nav fixed-top px-0 py-0">
-            <div class="navbar-main col-12 d-flex row px-0 mx-0 py-0 my-0">
+        <nav className="navbar custom-nav fixed-top px-0 py-0">
+            <div className="navbar-main col-12 d-flex row px-0 mx-0 py-0 my-0">
                 {/*Logo*/}
-                <div class="col-9 py-auto my-auto">
-                    <h6 class="py-auto my-auto">
-                        <a class="blog-name" href={Config.DOMAIN}>{Lan.t('blog_name')}</a>
+                <div className="col-9 py-auto my-auto">
+                    <h6 className="py-auto my-auto">
+                        <a className="blog-name" href={Config.DOMAIN}>{Lan.t('blog_name')}</a>
                     </h6>
                 </div>
 
-                <div class="col-3 d-flex flex-row-reverse py-auto my-auto">
-                    <a class="menu-button px-3"  data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fa fa-bars" aria-hidden="true"></i>
+                <div className="col-3 d-flex flex-row-reverse py-auto my-auto">
+                    <a className="menu-button px-3"  data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i className="fa fa-bars" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
-            <div class="collapse col-12 px-0 py-auto my-0" id="navbarToggleExternalContent">
-                <hr class="mt-0" />
-                <div class="d-flex justify-content-center">
+            <div className="collapse col-12 px-0 py-auto my-0" id="navbarToggleExternalContent">
+                <hr className="mt-0" />
+                <div className="d-flex justify-content-center">
                     <div>
                         {actionLinks}
                     </div>
                 </div>
                 <hr />
-                <div class="d-flex flex-row justify-content-center">
+                <div className="d-flex flex-row justify-content-center">
                     {socialLinks}
                 </div>
             </div>
