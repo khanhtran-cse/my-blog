@@ -1,0 +1,27 @@
+{
+  "name": "com.khanhtran.my-block",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khanhtrancse/my-blog.git"
+  },
+  "author": "Khanh Tran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khanhtrancse/my-blog/issues"
+  },
+  "homepage": "https://github.com/khanhtrancse/my-blog#readme",
+  "dependencies": {
+    "next": "^7.0.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  }
+}
