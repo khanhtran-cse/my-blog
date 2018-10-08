@@ -6,5 +6,6 @@ export default {
         ABOUT: prefix + '/about',
         TECHNICAL: prefix + '/technical',
         BUSINESS: prefix + '/business',
+        STATIC: prefix + '/static',
     }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Navigation from '../component/navigation'
 import SideBar from '../component/sidebar'
+import Config from '../config';
 
 export default class extends React.Component {
     state = {
@@ -23,7 +24,7 @@ export default class extends React.Component {
                     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
                     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
-                    <link rel="stylesheet" href="/static/css/custom.css" />
+                    <link rel="stylesheet" href={Config.PATH.STATIC + '/css/custom.css'} />
 
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
