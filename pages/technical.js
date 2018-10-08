@@ -3,6 +3,10 @@ import Container from '../component/container';
 import Lan from '../modules/language';
 
 export default class extends React.Component {
+    state = {
+        isLoading: true,
+    }
+
     componentDidMount() {
 
     }
@@ -11,8 +15,9 @@ export default class extends React.Component {
         return (
             <div>
                 <Container
-                title={Lan.t('blog_name')}>
-                    <p>This is the list of the latest posts.</p>
+                    title={Lan.t('technical_post')}
+                >
+                    <p>List of technical posts</p>
                 </Container>
             </div>
 

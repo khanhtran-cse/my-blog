@@ -4,5 +4,8 @@
     "home": "Trang chủ",
     "about": "Giới thiệu",
     "technical": "Kỹ thuật",
-    "business": "Kinh doanh"
+    "business": "Kinh doanh",
+    "about_me":"Giới thiệu tác giả",
+    "technical_post": "Bài viết về kỹ thuật",
+    "business_post": "Bài viết về kinh doanh"
 }
