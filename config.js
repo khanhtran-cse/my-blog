@@ -1,10 +1,10 @@
-const domain = 'locahost:3000';
+const prefix = process.env.NODE_ENV === 'production' ? '/my-blog':'';
+
 export default {
-    DOMAIN: domain,
     PATH: {
-        HOME:  '/',
-        ABOUT: '/about',
-        TECHNICAL: '/technical',
-        BUSINESS: '/business',
+        HOME: prefix + '/',
+        ABOUT: prefix + '/about',
+        TECHNICAL: prefix + '/technical',
+        BUSINESS: prefix + '/business',
     }
 }

@@ -32,7 +32,7 @@ export default () => {
                 {/*Logo*/}
                 <div class="d-flex flex-column">
                     <h5 class="mx-auto">
-                        <a class="blog-name" href={Config.DOMAIN}>{Lan.t('blog_name')}</a>
+                        <a class="blog-name" href={Config.PATH.HOME}>{Lan.t('blog_name')}</a>
                     </h5>
 
                     <div class="blog-description mx-auto">{Lan.t('blog_description')}</div>
