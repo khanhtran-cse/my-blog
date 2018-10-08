@@ -93,7 +93,7 @@ function (_React$Component) {
         },
         __self: this
       }, this.props.title, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-        charset: "utf-8",
+        charSet: "utf-8",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 29
@@ -11149,7 +11149,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 6:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/about.js ***!
   \******************************/
@@ -11174,5 +11174,5 @@ module.exports = dll_5d62d38be3592dca3a42;
 
 /***/ })
 
-},[[6,"static/runtime/webpack.js"]]]));;
+},[[4,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=about.js.map

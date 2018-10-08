@@ -93,7 +93,7 @@ function (_React$Component) {
         },
         __self: this
       }, this.props.title, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-        charset: "utf-8",
+        charSet: "utf-8",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 29
@@ -375,6 +375,7 @@ function (_React$Component) {
         totalPage: result.totalPage,
         page: page
       });
+      window.scrollTo(0, 0);
     }
   }, {
     key: "render",
@@ -383,7 +384,7 @@ function (_React$Component) {
         title: this.props.title,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 72
         },
         __self: this
       }, this.state.data);

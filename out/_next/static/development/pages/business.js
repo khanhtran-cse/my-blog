@@ -93,7 +93,7 @@ function (_React$Component) {
         },
         __self: this
       }, this.props.title, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-        charset: "utf-8",
+        charSet: "utf-8",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 29
@@ -375,6 +375,7 @@ function (_React$Component) {
         totalPage: result.totalPage,
         page: page
       });
+      window.scrollTo(0, 0);
     }
   }, {
     key: "render",
@@ -383,7 +384,7 @@ function (_React$Component) {
         title: this.props.title,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 72
         },
         __self: this
       }, this.state.data);
@@ -11601,7 +11602,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 6:
 /*!*********************************!*\
   !*** multi ./pages/business.js ***!
   \*********************************/
@@ -11626,5 +11627,5 @@ module.exports = dll_5d62d38be3592dca3a42;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]));;
+},[[6,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=business.js.map
