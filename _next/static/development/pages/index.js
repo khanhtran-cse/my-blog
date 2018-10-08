@@ -16,7 +16,209 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _component_navigation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../component/navigation */ "./component/navigation.js");
 /* harmony import */ var _component_sidebar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../component/sidebar */ "./component/sidebar.js");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../config */ "./config.js");
 var _jsxFileName = "/Users/KhanhTran/Projects/my-blog/component/container.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+
+var _default =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(_default, _React$Component);
+
+  function _default(props) {
+    var _this;
+
+    _classCallCheck(this, _default);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(_default).call(this, props)); // console.log(props);
+
+    var noData = !props.children || props.children == {} || props.children.length == 0;
+    _this.state = {
+      isLoading: noData
+    };
+    return _this;
+  }
+
+  _createClass(_default, [{
+    key: "componentWillReceiveProps",
+    value: function componentWillReceiveProps(nextProps) {
+      // console.log(nextProps);
+      var noData = !nextProps.children || nextProps.children == {} || nextProps.children.length == 0;
+      this.setState({
+        isLoading: noData
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27
+        },
+        __self: this
+      }, this.props.title, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
+        charset: "utf-8",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
+        name: "viewport",
+        content: "initial-scale=1.0, width=device-width",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+        rel: "stylesheet",
+        href: "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 31
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+        href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
+        rel: "stylesheet",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+        rel: "stylesheet",
+        href: _config__WEBPACK_IMPORTED_MODULE_4__["default"].PATH.STATIC + '/css/custom.css',
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 34
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
+        src: "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 36
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
+        src: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
+        src: "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_sidebar__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_navigation__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 45
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "main pt-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46
+        },
+        __self: this
+      }, this.state.isLoading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "loader d-flex justify-content-center align-items-center",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 48
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "lds-heart",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
+        },
+        __self: this
+      }))) : this.props.children));
+    }
+  }]);
+
+  return _default;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
+/***/ "./component/list-card.js":
+/*!********************************!*\
+  !*** ./component/list-card.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _component_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../component/container */ "./component/container.js");
+/* harmony import */ var _modules_language__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/language */ "./modules/language.js");
+/* harmony import */ var _component_post_card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../component/post-card */ "./component/post-card.js");
+/* harmony import */ var _component_no_data__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../component/no-data */ "./component/no-data.js");
+var _jsxFileName = "/Users/KhanhTran/Projects/my-blog/component/list-card.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -37,6 +239,12 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+/**
+ * List of props:
+ * - getData = (page)=>{totalPage: number,data: []}
+ * - title: string
+ */
 
 
 
@@ -62,7 +270,9 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(_default)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
-      isLoading: true
+      page: 1,
+      totalPage: 1,
+      data: []
     });
 
     return _this;
@@ -71,121 +281,112 @@ function (_React$Component) {
   _createClass(_default, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      this.renderData(1);
+    }
+  }, {
+    key: "goToNextPage",
+    value: function goToNextPage() {
+      this.renderData(this.state.page + 1);
+    }
+  }, {
+    key: "goToPrePage",
+    value: function goToPrePage() {
+      this.renderData(this.state.page - 1);
+    }
+  }, {
+    key: "renderData",
+    value: function renderData(page) {
       var _this2 = this;
 
-      setTimeout(function () {
-        return _this2.setState({
-          isLoading: false
+      if (!this.props.getData) {
+        return;
+      }
+
+      var result = this.props.getData(page);
+
+      if (result.data.length <= 0) {
+        var noPost = Object(_component_no_data__WEBPACK_IMPORTED_MODULE_4__["default"])();
+        this.setState({
+          data: noPost,
+          page: 1,
+          totalPage: 0
         });
-      }, 1000);
+        return;
+      } //Render post card
+
+
+      var posts = result.data.map(function (item) {
+        return Object(_component_post_card__WEBPACK_IMPORTED_MODULE_3__["default"])(item);
+      });
+      var list = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        key: 1,
+        className: "col-12 row mx-0",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54
+        },
+        __self: this
+      }, posts); //Render action
+
+      var move = [];
+
+      if (page > 1) {
+        move.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          className: "mx-2",
+          onClick: function onClick() {
+            return _this2.goToPrePage();
+          },
+          key: 1,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 59
+          },
+          __self: this
+        }, _modules_language__WEBPACK_IMPORTED_MODULE_2__["default"].t('previous_page')));
+      }
+
+      if (page < result.totalPage) {
+        move.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          className: "mx-2",
+          onClick: function onClick() {
+            return _this2.goToNextPage();
+          },
+          key: 2,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 62
+          },
+          __self: this
+        }, _modules_language__WEBPACK_IMPORTED_MODULE_2__["default"].t('next_page')));
+      }
+
+      var moveView = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        key: 2,
+        className: "col-12 d-flex justify-content-center row mx-0 mb-5",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 64
+        },
+        __self: this
+      }, move); // console.log(posts);
+
+      this.setState({
+        data: [list, moveView],
+        totalPage: result.totalPage,
+        page: page
+      });
     }
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_container__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        title: this.props.title,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 71
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 18
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 19
-        },
-        __self: this
-      }, this.props.title, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-        charset: "utf-8",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 21
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-        name: "viewport",
-        content: "initial-scale=1.0, width=device-width",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 22
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
-        rel: "stylesheet",
-        href: "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 23
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
-        href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
-        rel: "stylesheet",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 24
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
-        rel: "stylesheet",
-        href: "/static/css/custom.css",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 26
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
-        src: "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 28
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
-        src: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 30
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
-        src: "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 32
-        },
-        __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_sidebar__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 35
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_navigation__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 37
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        class: "main",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 38
-        },
-        __self: this
-      }, this.state.isLoading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 40
-        },
-        __self: this
-      }, "Loading") : this.props.children));
+      }, this.state.data);
     }
   }]);
 
@@ -270,7 +471,7 @@ var social = [{
   var socialLinks = social.map(function (item) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       key: item.key,
-      class: "mx-2",
+      className: "mx-2",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 25
@@ -284,7 +485,7 @@ var social = [{
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      class: item.name,
+      className: item.name,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 27
@@ -293,35 +494,35 @@ var social = [{
     })));
   });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    class: "navbar custom-nav fixed-top px-0 py-0",
+    className: "navbar custom-nav fixed-top px-0 py-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "navbar-main col-12 d-flex row px-0 mx-0 py-0 my-0",
+    className: "navbar-main col-12 d-flex row px-0 mx-0 py-0 my-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "col-9 py-auto my-auto",
+    className: "col-9 py-auto my-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 36
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
-    class: "py-auto my-auto",
+    className: "py-auto my-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 37
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    class: "blog-name",
+    className: "blog-name",
     href: _config__WEBPACK_IMPORTED_MODULE_1__["default"].DOMAIN,
     __source: {
       fileName: _jsxFileName,
@@ -329,14 +530,14 @@ var social = [{
     },
     __self: this
   }, _modules_language__WEBPACK_IMPORTED_MODULE_2__["default"].t('blog_name')))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "col-3 d-flex flex-row-reverse py-auto my-auto",
+    className: "col-3 d-flex flex-row-reverse py-auto my-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 42
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    class: "menu-button px-3",
+    className: "menu-button px-3",
     "data-toggle": "collapse",
     "data-target": "#navbarToggleExternalContent",
     "aria-controls": "navbarToggleExternalContent",
@@ -348,7 +549,7 @@ var social = [{
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    class: "fa fa-bars",
+    className: "fa fa-bars",
     "aria-hidden": "true",
     __source: {
       fileName: _jsxFileName,
@@ -356,7 +557,7 @@ var social = [{
     },
     __self: this
   })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "collapse col-12 px-0 py-auto my-0",
+    className: "collapse col-12 px-0 py-auto my-0",
     id: "navbarToggleExternalContent",
     __source: {
       fileName: _jsxFileName,
@@ -364,14 +565,14 @@ var social = [{
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-    class: "mt-0",
+    className: "mt-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 49
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "d-flex justify-content-center",
+    className: "d-flex justify-content-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 50
@@ -390,13 +591,148 @@ var social = [{
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "d-flex flex-row justify-content-center",
+    className: "d-flex flex-row justify-content-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 56
     },
     __self: this
   }, socialLinks)));
+});
+
+/***/ }),
+
+/***/ "./component/no-data.js":
+/*!******************************!*\
+  !*** ./component/no-data.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../config */ "./config.js");
+/* harmony import */ var _modules_language__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/language */ "./modules/language.js");
+var _jsxFileName = "/Users/KhanhTran/Projects/my-blog/component/no-data.js";
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "d-flex flex-column justify-content-center align-items-center no-data",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "no-data-image",
+    src: _config__WEBPACK_IMPORTED_MODULE_1__["default"].PATH.STATIC + '/images/no-data.png',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "no-data-title",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, _modules_language__WEBPACK_IMPORTED_MODULE_2__["default"].t('empty_list')));
+});
+
+/***/ }),
+
+/***/ "./component/post-card.js":
+/*!********************************!*\
+  !*** ./component/post-card.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../config */ "./config.js");
+var _jsxFileName = "/Users/KhanhTran/Projects/my-blog/component/post-card.js";
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function (post) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    key: post.id,
+    className: "post-card col-12 col-md-4 col-lg-3 inline-block px-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: _config__WEBPACK_IMPORTED_MODULE_1__["default"].PATH.POST + '/' + post.link,
+    className: "post-card-image-block mx-auto",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "post-card-image mx-auto px-auto",
+    style: {
+      background: "url(".concat(post.image, ")")
+    },
+    alt: post.name,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "mb-5",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "post-card__meta",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "post-card-time my-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, post.date_string)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    title: post.name,
+    href: _config__WEBPACK_IMPORTED_MODULE_1__["default"].PATH.POST + '/' + post.link,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, post.name))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+    className: "post-card-separator",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }));
 });
 
 /***/ }),
@@ -458,7 +794,7 @@ var social = [{
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      class: "menu-item my-2",
+      className: "menu-item my-2",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 20
@@ -469,7 +805,7 @@ var social = [{
   var socialLinks = social.map(function (item) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       key: item.key,
-      class: "mx-2",
+      className: "mx-2",
       href: item.ref,
       __source: {
         fileName: _jsxFileName,
@@ -477,7 +813,7 @@ var social = [{
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      class: item.name,
+      className: item.name,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 25
@@ -486,35 +822,35 @@ var social = [{
     }));
   });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "sidebar",
+    className: "sidebar",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "col-12 side-bar-center",
+    className: "col-12 side-bar-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "d-flex flex-column",
+    className: "d-flex flex-column",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-    class: "mx-auto",
+    className: "mx-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    class: "blog-name",
+    className: "blog-name",
     href: _config__WEBPACK_IMPORTED_MODULE_1__["default"].PATH.HOME,
     __source: {
       fileName: _jsxFileName,
@@ -522,7 +858,7 @@ var social = [{
     },
     __self: this
   }, _modules_language__WEBPACK_IMPORTED_MODULE_2__["default"].t('blog_name'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "blog-description mx-auto",
+    className: "blog-description mx-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 38
@@ -535,7 +871,7 @@ var social = [{
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "d-flex justify-content-center",
+    className: "d-flex justify-content-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 41
@@ -554,7 +890,7 @@ var social = [{
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "d-flex flex-row justify-content-center",
+    className: "d-flex flex-row justify-content-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 47
@@ -574,17 +910,197 @@ var social = [{
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var domain = 'locahost:3000';
 var prefix =  false ? undefined : '';
 /* harmony default export */ __webpack_exports__["default"] = ({
-  DOMAIN: domain,
   PATH: {
     HOME: prefix + '/',
     ABOUT: prefix + '/about',
     TECHNICAL: prefix + '/technical',
-    BUSINESS: prefix + '/business'
-  }
+    BUSINESS: prefix + '/business',
+    STATIC: prefix + '/static',
+    POST: prefix + '/post'
+  },
+  NUMBER_POST_PER_PAGE: 8
 });
+
+/***/ }),
+
+/***/ "./data/post.js":
+/*!**********************!*\
+  !*** ./data/post.js ***!
+  \**********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../config */ "./config.js");
+
+
+function getPostsByPage(data, page) {
+  var start = (page - 1) * _config__WEBPACK_IMPORTED_MODULE_0__["default"].NUMBER_POST_PER_PAGE;
+  var end = page * _config__WEBPACK_IMPORTED_MODULE_0__["default"].NUMBER_POST_PER_PAGE;
+  var totalPage = Math.ceil(data.length / _config__WEBPACK_IMPORTED_MODULE_0__["default"].NUMBER_POST_PER_PAGE);
+  return {
+    totalPage: totalPage,
+    data: data.slice(start, end)
+  };
+}
+
+function getLatestPosts(page) {
+  return getPostsByPage(data, page);
+}
+
+function getPostsByCategory(category, page) {
+  var cd = data.filter(function (item) {
+    for (var i = 0; i < item.category.length; i++) {
+      if (item.category[i] == category) {
+        return true;
+      }
+    }
+
+    return false;
+  });
+  return getPostsByPage(cd, page);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  getLatestPosts: getLatestPosts,
+  getPostsByCategory: getPostsByCategory
+});
+var data = [{
+  "id": 17,
+  "name": "How to make your blog free.",
+  "date": 1539013138,
+  "date_string": "Oct 11 2018",
+  "link": 'how-to-deloy-a-nodejs-applicatioin',
+  "category": ["nodejs", "server", "backend", "technical"],
+  "image": "http://stellarcode.co/wp-content/uploads/2018/06/1_KqO5C0953HQzafpnBYaTSg.jpeg"
+}, {
+  "id": 16,
+  "name": "How to deploy a Node.js application to Amazon Web Services using Docker",
+  "date": 1539013138,
+  "date_string": "Oct 10 2018",
+  "category": ["nodejs", "server", "technical", "backend"],
+  "image": "http://stellarcode.co/wp-content/uploads/2017/12/1_gVQU50zNWjL1kihKKQ5zYQ.jpeg"
+}, {
+  "id": 15,
+  "name": "How to make your blog free.",
+  "date": 1539013138,
+  "date_string": "Oct 11 2018",
+  "link": 'how-to-deloy-a-nodejs-applicatioin',
+  "category": ["nodejs", "server", "backend", "technical"],
+  "image": "http://stellarcode.co/wp-content/uploads/2018/06/1_KqO5C0953HQzafpnBYaTSg.jpeg"
+}, {
+  "id": 14,
+  "name": "How to deploy a Node.js application to Amazon Web Services using Docker",
+  "date": 1539013138,
+  "date_string": "Oct 10 2018",
+  "category": ["nodejs", "server", "backend"],
+  "image": "http://stellarcode.co/wp-content/uploads/2017/12/1_gVQU50zNWjL1kihKKQ5zYQ.jpeg"
+}, {
+  "id": 13,
+  "name": "How to make your blog free.",
+  "date": 1539013138,
+  "date_string": "Oct 11 2018",
+  "link": 'how-to-deloy-a-nodejs-applicatioin',
+  "category": ["nodejs", "server", "backend"],
+  "image": "http://stellarcode.co/wp-content/uploads/2018/06/1_KqO5C0953HQzafpnBYaTSg.jpeg"
+}, {
+  "id": 12,
+  "name": "How to deploy a Node.js application to Amazon Web Services using Docker",
+  "date": 1539013138,
+  "date_string": "Oct 10 2018",
+  "category": ["nodejs", "server", "backend"],
+  "image": "http://stellarcode.co/wp-content/uploads/2017/12/1_gVQU50zNWjL1kihKKQ5zYQ.jpeg"
+}, {
+  "id": 11,
+  "name": "How to make your blog free.",
+  "date": 1539013138,
+  "date_string": "Oct 11 2018",
+  "link": 'how-to-deloy-a-nodejs-applicatioin',
+  "category": ["nodejs", "server", "backend"],
+  "image": "http://stellarcode.co/wp-content/uploads/2018/06/1_KqO5C0953HQzafpnBYaTSg.jpeg"
+}, {
+  "id": 10,
+  "name": "How to deploy a Node.js application to Amazon Web Services using Docker",
+  "date": 1539013138,
+  "date_string": "Oct 10 2018",
+  "category": ["nodejs", "server", "backend"],
+  "image": "http://stellarcode.co/wp-content/uploads/2017/12/1_gVQU50zNWjL1kihKKQ5zYQ.jpeg"
+}, {
+  "id": 9,
+  "name": "How to deploy a Node.js application to Amazon Web Services using Docker and learn about docker",
+  "date": 1539013138,
+  "date_string": "Oct 1 2018",
+  "link": 'how-to-deloy-a-nodejs-applicatioin',
+  "category": ["nodejs", "server", "backend"],
+  "image": "http://stellarcode.co/wp-content/uploads/2017/08/INSPIRED.png"
+}, {
+  "id": 8,
+  "name": "How to deploy a Node.js application to Amazon Web Services using Docker",
+  "date": 1539013138,
+  "date_string": "Sep 15 2018",
+  "link": 'how-to-deloy-a-nodejs-applicatioin',
+  "category": ["nodejs", "server", "backend"],
+  "image": "http://stellarcode.co/wp-content/uploads/2018/06/1_KqO5C0953HQzafpnBYaTSg.jpeg"
+}, {
+  "id": 7,
+  "name": "How to deploy a Node.js application to Amazon Web Services using Docker",
+  "date": 1539013138,
+  "date_string": "July 24 2018",
+  "link": 'how-to-deloy-a-nodejs-applicatioin',
+  "category": ["nodejs", "server", "backend"],
+  "image": "http://stellarcode.co/wp-content/uploads/2018/06/1_KqO5C0953HQzafpnBYaTSg.jpeg"
+}, {
+  "id": 6,
+  "name": "How to deploy a Node.js application to Amazon Web Services using Docker",
+  "date": 1539013138,
+  "date_string": "July 24 2018",
+  "link": 'how-to-deloy-a-nodejs-applicatioin',
+  "category": ["nodejs", "server", "backend"],
+  "image": "http://stellarcode.co/wp-content/uploads/2018/06/1_KqO5C0953HQzafpnBYaTSg.jpeg"
+}, {
+  "id": 5,
+  "name": "How to deploy a Node.js application to Amazon Web Services using Docker",
+  "date": 1539013138,
+  "date_string": "July 24 2018",
+  "link": 'how-to-deloy-a-nodejs-applicatioin',
+  "category": ["nodejs", "server", "backend"],
+  "image": "http://stellarcode.co/wp-content/uploads/2018/06/1_KqO5C0953HQzafpnBYaTSg.jpeg"
+}, {
+  "id": 4,
+  "name": "How to deploy a Node.js application to Amazon Web Services using Docker",
+  "date": 1539013138,
+  "date_string": "July 24 2018",
+  "link": 'how-to-deloy-a-nodejs-applicatioin',
+  "category": ["nodejs", "server", "backend"],
+  "image": "http://stellarcode.co/wp-content/uploads/2018/06/1_KqO5C0953HQzafpnBYaTSg.jpeg"
+}, {
+  "id": 3,
+  "name": "How to deploy a Node.js application to Amazon Web Services using Docker",
+  "date": 1539013138,
+  "date_string": "July 24 2018",
+  "link": 'how-to-deloy-a-nodejs-applicatioin',
+  "category": ["nodejs", "server", "backend"],
+  "image": "http://stellarcode.co/wp-content/uploads/2018/06/1_KqO5C0953HQzafpnBYaTSg.jpeg"
+}, {
+  "id": 2,
+  "name": "How to deploy a Node.js application to Amazon Web Services using Docker",
+  "date": 1539013138,
+  "date_string": "July 24 2018",
+  "link": 'how-to-deloy-a-nodejs-applicatioin',
+  "category": ["nodejs", "server", "backend"],
+  "image": "http://stellarcode.co/wp-content/uploads/2018/06/1_KqO5C0953HQzafpnBYaTSg.jpeg"
+}, {
+  "id": 1,
+  "name": "How to deploy a Node.js application to Amazon Web Services using Docker",
+  "date": 1539013138,
+  "date_string": "July 24 2018",
+  "link": 'how-to-deloy-a-nodejs-applicatioin',
+  "category": ["nodejs", "server", "backend"],
+  "image": "http://stellarcode.co/wp-content/uploads/2018/06/1_KqO5C0953HQzafpnBYaTSg.jpeg"
+}];
 
 /***/ }),
 
@@ -592,10 +1108,10 @@ var prefix =  false ? undefined : '';
 /*!********************************!*\
   !*** ./modules/assets/vi.json ***!
   \********************************/
-/*! exports provided: blog_name, blog_description, home, about, technical, business, about_me, technical_post, business_post, default */
+/*! exports provided: blog_name, blog_description, home, about, technical, business, about_me, technical_post, business_post, next_page, previous_page, empty_list, default */
 /***/ (function(module) {
 
-module.exports = {"blog_name":"Trần Quốc Khánh","blog_description":"A coder","home":"Trang chủ","about":"Giới thiệu","technical":"Kỹ thuật","business":"Kinh doanh","about_me":"Giới thiệu tác giả","technical_post":"Bài viết về kỹ thuật","business_post":"Bài viết về kinh doanh"};
+module.exports = {"blog_name":"Trần Quốc Khánh","blog_description":"A coder","home":"Trang chủ","about":"Giới thiệu","technical":"Kỹ thuật","business":"Kinh doanh","about_me":"Giới thiệu tác giả","technical_post":"Bài viết về kỹ thuật","business_post":"Bài viết về kinh doanh","next_page":"Trang sau","previous_page":"Trang trước","empty_list":"Hiện không có bài viết nào trong mục này. Bạn vui lòng quay lại sau. "};
 
 /***/ }),
 
@@ -11003,8 +11519,9 @@ __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(module) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _component_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../component/container */ "./component/container.js");
-/* harmony import */ var _modules_language__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/language */ "./modules/language.js");
+/* harmony import */ var _modules_language__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/language */ "./modules/language.js");
+/* harmony import */ var _data_post__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../data/post */ "./data/post.js");
+/* harmony import */ var _component_list_card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../component/list-card */ "./component/list-card.js");
 var _jsxFileName = "/Users/KhanhTran/Projects/my-blog/pages/index.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -11029,6 +11546,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var _default =
 /*#__PURE__*/
 function (_React$Component) {
@@ -11041,31 +11559,19 @@ function (_React$Component) {
   }
 
   _createClass(_default, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {}
-  }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_list_card__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        title: _modules_language__WEBPACK_IMPORTED_MODULE_1__["default"].t('blog_name'),
+        getData: function getData(page) {
+          return _data_post__WEBPACK_IMPORTED_MODULE_2__["default"].getLatestPosts(page);
+        },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 10
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_container__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        title: _modules_language__WEBPACK_IMPORTED_MODULE_2__["default"].t('blog_name'),
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 13
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 15
-        },
-        __self: this
-      }, "This is the list of the latest posts.")));
+      });
     }
   }]);
 

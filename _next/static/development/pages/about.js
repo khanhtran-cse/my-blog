@@ -16,6 +16,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _component_navigation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../component/navigation */ "./component/navigation.js");
 /* harmony import */ var _component_sidebar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../component/sidebar */ "./component/sidebar.js");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../config */ "./config.js");
 var _jsxFileName = "/Users/KhanhTran/Projects/my-blog/component/container.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -28,15 +29,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
@@ -48,36 +48,28 @@ var _default =
 function (_React$Component) {
   _inherits(_default, _React$Component);
 
-  function _default() {
-    var _getPrototypeOf2;
-
+  function _default(props) {
     var _this;
 
     _classCallCheck(this, _default);
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(_default).call(this, props)); // console.log(props);
 
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(_default)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
-      isLoading: true
-    });
-
+    var noData = !props.children || props.children == {} || props.children.length == 0;
+    _this.state = {
+      isLoading: noData
+    };
     return _this;
   }
 
   _createClass(_default, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      setTimeout(function () {
-        return _this2.setState({
-          isLoading: false
-        });
-      }, 1000);
+    key: "componentWillReceiveProps",
+    value: function componentWillReceiveProps(nextProps) {
+      // console.log(nextProps);
+      var noData = !nextProps.children || nextProps.children == {} || nextProps.children.length == 0;
+      this.setState({
+        isLoading: noData
+      });
     }
   }, {
     key: "render",
@@ -85,26 +77,26 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 25
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 26
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 27
         },
         __self: this
       }, this.props.title, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
         charset: "utf-8",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 29
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
@@ -112,7 +104,7 @@ function (_React$Component) {
         content: "initial-scale=1.0, width=device-width",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 30
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -120,7 +112,7 @@ function (_React$Component) {
         href: "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 31
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -128,64 +120,78 @@ function (_React$Component) {
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 32
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
         rel: "stylesheet",
-        href: "/static/css/custom.css",
+        href: _config__WEBPACK_IMPORTED_MODULE_4__["default"].PATH.STATIC + '/css/custom.css',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 34
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
         src: "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 36
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
         src: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 38
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
         src: "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 40
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_sidebar__WEBPACK_IMPORTED_MODULE_3__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 43
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_navigation__WEBPACK_IMPORTED_MODULE_2__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 45
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        class: "main",
+        className: "main pt-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 46
         },
         __self: this
-      }, this.state.isLoading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      }, this.state.isLoading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "loader d-flex justify-content-center align-items-center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 48
         },
         __self: this
-      }, "Loading") : this.props.children));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "lds-heart",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
+        },
+        __self: this
+      }))) : this.props.children));
     }
   }]);
 
@@ -270,7 +276,7 @@ var social = [{
   var socialLinks = social.map(function (item) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       key: item.key,
-      class: "mx-2",
+      className: "mx-2",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 25
@@ -284,7 +290,7 @@ var social = [{
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      class: item.name,
+      className: item.name,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 27
@@ -293,35 +299,35 @@ var social = [{
     })));
   });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    class: "navbar custom-nav fixed-top px-0 py-0",
+    className: "navbar custom-nav fixed-top px-0 py-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "navbar-main col-12 d-flex row px-0 mx-0 py-0 my-0",
+    className: "navbar-main col-12 d-flex row px-0 mx-0 py-0 my-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "col-9 py-auto my-auto",
+    className: "col-9 py-auto my-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 36
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
-    class: "py-auto my-auto",
+    className: "py-auto my-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 37
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    class: "blog-name",
+    className: "blog-name",
     href: _config__WEBPACK_IMPORTED_MODULE_1__["default"].DOMAIN,
     __source: {
       fileName: _jsxFileName,
@@ -329,14 +335,14 @@ var social = [{
     },
     __self: this
   }, _modules_language__WEBPACK_IMPORTED_MODULE_2__["default"].t('blog_name')))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "col-3 d-flex flex-row-reverse py-auto my-auto",
+    className: "col-3 d-flex flex-row-reverse py-auto my-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 42
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    class: "menu-button px-3",
+    className: "menu-button px-3",
     "data-toggle": "collapse",
     "data-target": "#navbarToggleExternalContent",
     "aria-controls": "navbarToggleExternalContent",
@@ -348,7 +354,7 @@ var social = [{
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    class: "fa fa-bars",
+    className: "fa fa-bars",
     "aria-hidden": "true",
     __source: {
       fileName: _jsxFileName,
@@ -356,7 +362,7 @@ var social = [{
     },
     __self: this
   })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "collapse col-12 px-0 py-auto my-0",
+    className: "collapse col-12 px-0 py-auto my-0",
     id: "navbarToggleExternalContent",
     __source: {
       fileName: _jsxFileName,
@@ -364,14 +370,14 @@ var social = [{
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-    class: "mt-0",
+    className: "mt-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 49
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "d-flex justify-content-center",
+    className: "d-flex justify-content-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 50
@@ -390,13 +396,58 @@ var social = [{
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "d-flex flex-row justify-content-center",
+    className: "d-flex flex-row justify-content-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 56
     },
     __self: this
   }, socialLinks)));
+});
+
+/***/ }),
+
+/***/ "./component/no-data.js":
+/*!******************************!*\
+  !*** ./component/no-data.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../config */ "./config.js");
+/* harmony import */ var _modules_language__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/language */ "./modules/language.js");
+var _jsxFileName = "/Users/KhanhTran/Projects/my-blog/component/no-data.js";
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "d-flex flex-column justify-content-center align-items-center no-data",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "no-data-image",
+    src: _config__WEBPACK_IMPORTED_MODULE_1__["default"].PATH.STATIC + '/images/no-data.png',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "no-data-title",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, _modules_language__WEBPACK_IMPORTED_MODULE_2__["default"].t('empty_list')));
 });
 
 /***/ }),
@@ -458,7 +509,7 @@ var social = [{
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      class: "menu-item my-2",
+      className: "menu-item my-2",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 20
@@ -469,7 +520,7 @@ var social = [{
   var socialLinks = social.map(function (item) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       key: item.key,
-      class: "mx-2",
+      className: "mx-2",
       href: item.ref,
       __source: {
         fileName: _jsxFileName,
@@ -477,7 +528,7 @@ var social = [{
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      class: item.name,
+      className: item.name,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 25
@@ -486,35 +537,35 @@ var social = [{
     }));
   });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "sidebar",
+    className: "sidebar",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "col-12 side-bar-center",
+    className: "col-12 side-bar-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "d-flex flex-column",
+    className: "d-flex flex-column",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-    class: "mx-auto",
+    className: "mx-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    class: "blog-name",
+    className: "blog-name",
     href: _config__WEBPACK_IMPORTED_MODULE_1__["default"].PATH.HOME,
     __source: {
       fileName: _jsxFileName,
@@ -522,7 +573,7 @@ var social = [{
     },
     __self: this
   }, _modules_language__WEBPACK_IMPORTED_MODULE_2__["default"].t('blog_name'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "blog-description mx-auto",
+    className: "blog-description mx-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 38
@@ -535,7 +586,7 @@ var social = [{
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "d-flex justify-content-center",
+    className: "d-flex justify-content-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 41
@@ -554,7 +605,7 @@ var social = [{
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: "d-flex flex-row justify-content-center",
+    className: "d-flex flex-row justify-content-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 47
@@ -574,16 +625,17 @@ var social = [{
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var domain = 'locahost:3000';
 var prefix =  false ? undefined : '';
 /* harmony default export */ __webpack_exports__["default"] = ({
-  DOMAIN: domain,
   PATH: {
     HOME: prefix + '/',
     ABOUT: prefix + '/about',
     TECHNICAL: prefix + '/technical',
-    BUSINESS: prefix + '/business'
-  }
+    BUSINESS: prefix + '/business',
+    STATIC: prefix + '/static',
+    POST: prefix + '/post'
+  },
+  NUMBER_POST_PER_PAGE: 8
 });
 
 /***/ }),
@@ -592,10 +644,10 @@ var prefix =  false ? undefined : '';
 /*!********************************!*\
   !*** ./modules/assets/vi.json ***!
   \********************************/
-/*! exports provided: blog_name, blog_description, home, about, technical, business, about_me, technical_post, business_post, default */
+/*! exports provided: blog_name, blog_description, home, about, technical, business, about_me, technical_post, business_post, next_page, previous_page, empty_list, default */
 /***/ (function(module) {
 
-module.exports = {"blog_name":"Trần Quốc Khánh","blog_description":"A coder","home":"Trang chủ","about":"Giới thiệu","technical":"Kỹ thuật","business":"Kinh doanh","about_me":"Giới thiệu tác giả","technical_post":"Bài viết về kỹ thuật","business_post":"Bài viết về kinh doanh"};
+module.exports = {"blog_name":"Trần Quốc Khánh","blog_description":"A coder","home":"Trang chủ","about":"Giới thiệu","technical":"Kỹ thuật","business":"Kinh doanh","about_me":"Giới thiệu tác giả","technical_post":"Bài viết về kỹ thuật","business_post":"Bài viết về kinh doanh","next_page":"Trang sau","previous_page":"Trang trước","empty_list":"Hiện không có bài viết nào trong mục này. Bạn vui lòng quay lại sau. "};
 
 /***/ }),
 
@@ -11005,6 +11057,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _component_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../component/container */ "./component/container.js");
 /* harmony import */ var _modules_language__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/language */ "./modules/language.js");
+/* harmony import */ var _component_no_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../component/no-data */ "./component/no-data.js");
 var _jsxFileName = "/Users/KhanhTran/Projects/my-blog/pages/about.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -11017,15 +11070,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
@@ -11037,23 +11089,9 @@ function (_React$Component) {
   _inherits(_default, _React$Component);
 
   function _default() {
-    var _getPrototypeOf2;
-
-    var _this;
-
     _classCallCheck(this, _default);
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(_default)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
-      isLoading: true
-    });
-
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(_default).apply(this, arguments));
   }
 
   _createClass(_default, [{
@@ -11065,23 +11103,23 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16
+          lineNumber: 13
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_container__WEBPACK_IMPORTED_MODULE_1__["default"], {
         title: _modules_language__WEBPACK_IMPORTED_MODULE_2__["default"].t('about_me'),
         __source: {
           fileName: _jsxFileName,
+          lineNumber: 14
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_no_data__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        __source: {
+          fileName: _jsxFileName,
           lineNumber: 17
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 20
-        },
-        __self: this
-      }, "This is test paragraph")));
+      })));
     }
   }]);
 
@@ -11111,7 +11149,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 6:
 /*!******************************!*\
   !*** multi ./pages/about.js ***!
   \******************************/
@@ -11136,5 +11174,5 @@ module.exports = dll_5d62d38be3592dca3a42;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]));;
+},[[6,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=about.js.map
