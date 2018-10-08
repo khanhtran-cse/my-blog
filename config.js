@@ -1,4 +1,4 @@
-const domain = 'https://khanhtrancse.github.io/my-blog';
+const domain = 'locahost:3000';
 export default {
     DOMAIN: domain,
     PATH: {
