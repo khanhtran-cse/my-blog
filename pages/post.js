@@ -26,11 +26,14 @@ export default class extends React.Component {
             const regex = /id=[0-9]*/g
             const idString = query.match(regex)[0];
             const id = idString.slice(3, idString.length);
+            console.log(query);
+            console.log('Get information of post has id',id);
 
             //Get data of target post
             const content = Detail.getDetail(id);
             const meta = Data.getPost(id);
 
+            console.log('data',content,meta);
             if (content && meta) {
                 this.setState({
                     meta,
@@ -39,7 +42,7 @@ export default class extends React.Component {
             } else {
                 console.log('error',content,meta);
                 this.setState({
-                    meta: {},
+                    meta: {name: Lan.t('title_error')},
                     content: null
                 })
             }
