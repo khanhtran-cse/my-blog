@@ -30,13 +30,14 @@ export default class extends React.Component {
             //Get data of target post
             const content = Detail.getDetail(id);
             const meta = Data.getPost(id);
-            
+
             if (content && meta) {
                 this.setState({
                     meta,
                     content
                 })
             } else {
+                console.log('error',content,meta);
                 this.setState({
                     meta: {},
                     content: null
