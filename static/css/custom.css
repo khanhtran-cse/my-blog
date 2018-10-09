@@ -237,3 +237,63 @@ a:hover{
   color: #7E7E7E;
   text-align: center;
 }
+
+/*
+7. Post detail
+*/
+.post-cover-image{
+  max-height: 600px;
+  width: 100% !important;
+  padding-top: 50%;
+  height: auto !important;
+  background-position: 50% !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.post-detail{
+  margin-top: -6em;
+  width: 80%;
+  background: white;
+}
+
+.post-detail-title{
+  text-align: center;
+}
+
+.post-detail-date{
+  font-size: 14px;
+  line-height: 22px;
+  color: #7E7E7E;
+}
+
+.post-detail-category{
+  font-size: 14px;
+  line-height: 22px;
+  color: #7E7E7E;
+}
+
+
+@media only screen and (min-width: 64.063em){
+  .post-detail{
+    margin-top: -6em;
+    width: 80%;
+    padding: 3em 4em;
+  }
+
+  .post-cover-image{
+    max-height: 600px;
+  }
+}
+
+@media only screen and (max-width: 64em){
+  .post-detail{
+    margin-top: 0em;
+    width: 100%;
+    padding: 1em 0em;
+  }
+
+  .post-cover-image{
+    max-height: 300px;
+  }
+}
