@@ -69,10 +69,9 @@ export default class extends React.Component {
 
     render() {
         return (
-            <Container
-                title={this.props.title}>
+            <div>
                 {this.state.data}
-            </Container>
+            </div>
 
         );
     }

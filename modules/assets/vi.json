@@ -10,5 +10,6 @@
     "business_post": "Bài viết về kinh doanh",
     "next_page":"Trang sau",
     "previous_page":"Trang trước",
-    "empty_list":"Hiện không có bài viết nào trong mục này. Bạn vui lòng quay lại sau. "
+    "empty_list":"Hiện không có bài viết nào trong mục này. Bạn vui lòng quay lại sau. ",
+    "default_post_name": "Bài viết"
 }
