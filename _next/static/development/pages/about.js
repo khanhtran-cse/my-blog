@@ -1,4 +1,4 @@
-((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/post.js"],{
+((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/about.js"],{
 
 /***/ "./component/container.js":
 /*!********************************!*\
@@ -640,126 +640,6 @@ var prefix =  false ? undefined : '';
 
 /***/ }),
 
-/***/ "./data/detail/index.js":
-/*!******************************!*\
-  !*** ./data/detail/index.js ***!
-  \******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/dynamic */ "./node_modules/next/dynamic.js");
-/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/KhanhTran/Projects/my-blog/data/detail/index.js";
-
-
-
-function getDetail(id) {
-  try {
-    id = parseInt(id);
-  } catch (err) {
-    return null;
-  }
-
-  switch (id) {
-    case 1:
-      var Post1 = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(function () {
-        return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./post-1 */ "./data/detail/post-1.js"));
-      }, {
-        loadableGenerated: {
-          webpack: function webpack() {
-            return [/*require.resolve*/(/*! ./post-1 */ "./data/detail/post-1.js")];
-          },
-          modules: ['./post-1']
-        }
-      });
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Post1, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 12
-        },
-        __self: this
-      });
-  }
-
-  return null;
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  getDetail: getDetail
-});
-
-/***/ }),
-
-/***/ "./data/meta/index.js":
-/*!****************************!*\
-  !*** ./data/meta/index.js ***!
-  \****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../config */ "./config.js");
-
-
-function getPostsByPage(data, page) {
-  var start = (page - 1) * _config__WEBPACK_IMPORTED_MODULE_0__["default"].NUMBER_POST_PER_PAGE;
-  var end = page * _config__WEBPACK_IMPORTED_MODULE_0__["default"].NUMBER_POST_PER_PAGE;
-  var totalPage = Math.ceil(data.length / _config__WEBPACK_IMPORTED_MODULE_0__["default"].NUMBER_POST_PER_PAGE);
-  return {
-    totalPage: totalPage,
-    data: data.slice(start, end)
-  };
-}
-
-function getLatestPosts(page) {
-  return getPostsByPage(data, page);
-}
-
-function getPostsByCategory(category, page) {
-  var cd = data.filter(function (item) {
-    for (var i = 0; i < item.category.length; i++) {
-      if (item.category[i] == category) {
-        return true;
-      }
-    }
-
-    return false;
-  });
-  return getPostsByPage(cd, page);
-}
-
-function getPost(id) {
-  for (var i = 0; i < data.length; i++) {
-    if (data[i].id == id) {
-      return data[i];
-    }
-  }
-
-  return null;
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  getLatestPosts: getLatestPosts,
-  getPostsByCategory: getPostsByCategory,
-  getPost: getPost
-});
-var data = [{
-  "id": 1,
-  "name": "How to make your blog free.",
-  "date": 1539013138,
-  "date_string": "Oct 10 2018",
-  "link": 'how-to-make-your-blog-free',
-  "category": ["blog", "technical"],
-  "image": "http://stellarcode.co/wp-content/uploads/2018/06/1_KqO5C0953HQzafpnBYaTSg.jpeg"
-}];
-
-/***/ }),
-
 /***/ "./modules/assets/vi.json":
 /*!********************************!*\
   !*** ./modules/assets/vi.json ***!
@@ -844,17 +724,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/is-iterable */ "./no
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/json/stringify */ "./node_modules/core-js/library/fn/json/stringify.js");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/map.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/map.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/map */ "./node_modules/core-js/library/fn/map.js");
 
 /***/ }),
 
@@ -1662,25 +1531,6 @@ var $JSON = core.JSON || (core.JSON = { stringify: JSON.stringify });
 module.exports = function stringify(it) { // eslint-disable-line no-unused-vars
   return $JSON.stringify.apply($JSON, arguments);
 };
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/fn/map.js":
-/*!************************************************!*\
-  !*** ./node_modules/core-js/library/fn/map.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! ../modules/es6.object.to-string */ "./node_modules/core-js/library/modules/es6.object.to-string.js");
-__webpack_require__(/*! ../modules/es6.string.iterator */ "./node_modules/core-js/library/modules/es6.string.iterator.js");
-__webpack_require__(/*! ../modules/web.dom.iterable */ "./node_modules/core-js/library/modules/web.dom.iterable.js");
-__webpack_require__(/*! ../modules/es6.map */ "./node_modules/core-js/library/modules/es6.map.js");
-__webpack_require__(/*! ../modules/es7.map.to-json */ "./node_modules/core-js/library/modules/es7.map.to-json.js");
-__webpack_require__(/*! ../modules/es7.map.of */ "./node_modules/core-js/library/modules/es7.map.of.js");
-__webpack_require__(/*! ../modules/es7.map.from */ "./node_modules/core-js/library/modules/es7.map.from.js");
-module.exports = __webpack_require__(/*! ../modules/_core */ "./node_modules/core-js/library/modules/_core.js").Map;
 
 
 /***/ }),
@@ -4380,37 +4230,6 @@ addToUnscopables('entries');
 
 /***/ }),
 
-/***/ "./node_modules/core-js/library/modules/es6.map.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/core-js/library/modules/es6.map.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var strong = __webpack_require__(/*! ./_collection-strong */ "./node_modules/core-js/library/modules/_collection-strong.js");
-var validate = __webpack_require__(/*! ./_validate-collection */ "./node_modules/core-js/library/modules/_validate-collection.js");
-var MAP = 'Map';
-
-// 23.1 Map Objects
-module.exports = __webpack_require__(/*! ./_collection */ "./node_modules/core-js/library/modules/_collection.js")(MAP, function (get) {
-  return function Map() { return get(this, arguments.length > 0 ? arguments[0] : undefined); };
-}, {
-  // 23.1.3.6 Map.prototype.get(key)
-  get: function get(key) {
-    var entry = strong.getEntry(validate(this, MAP), key);
-    return entry && entry.v;
-  },
-  // 23.1.3.9 Map.prototype.set(key, value)
-  set: function set(key, value) {
-    return strong.def(validate(this, MAP), key === 0 ? 0 : key, value);
-  }
-}, strong, true);
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/library/modules/es6.object.assign.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/core-js/library/modules/es6.object.assign.js ***!
@@ -5196,47 +5015,6 @@ setToStringTag(global.JSON, 'JSON', true);
 
 /***/ }),
 
-/***/ "./node_modules/core-js/library/modules/es7.map.from.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/es7.map.from.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://tc39.github.io/proposal-setmap-offrom/#sec-map.from
-__webpack_require__(/*! ./_set-collection-from */ "./node_modules/core-js/library/modules/_set-collection-from.js")('Map');
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/es7.map.of.js":
-/*!************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/es7.map.of.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://tc39.github.io/proposal-setmap-offrom/#sec-map.of
-__webpack_require__(/*! ./_set-collection-of */ "./node_modules/core-js/library/modules/_set-collection-of.js")('Map');
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/es7.map.to-json.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/es7.map.to-json.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://github.com/DavidBruant/Map-Set.prototype.toJSON
-var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/library/modules/_export.js");
-
-$export($export.P + $export.R, 'Map', { toJSON: __webpack_require__(/*! ./_collection-to-json */ "./node_modules/core-js/library/modules/_collection-to-json.js")('Map') });
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/library/modules/es7.promise.finally.js":
 /*!*********************************************************************!*\
   !*** ./node_modules/core-js/library/modules/es7.promise.finally.js ***!
@@ -5771,150 +5549,6 @@ exports.default = EventEmitter;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/lib/dynamic.js":
-/*!***********************************************!*\
-  !*** ./node_modules/next/dist/lib/dynamic.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.noSSR = noSSR;
-exports.default = dynamic;
-
-var _keys = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js"));
-
-var _objectSpread2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/objectSpread.js"));
-
-var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/typeof */ "./node_modules/@babel/runtime-corejs2/helpers/typeof.js"));
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _loadable = _interopRequireDefault(__webpack_require__(/*! ./loadable */ "./node_modules/next/dist/lib/loadable.js"));
-
-var isServerSide = typeof window === 'undefined';
-
-function noSSR(LoadableInitializer, loadableOptions) {
-  // Removing webpack and modules means react-loadable won't try preloading
-  delete loadableOptions.webpack;
-  delete loadableOptions.modules; // This check is neccesary to prevent react-loadable from initializing on the server
-
-  if (!isServerSide) {
-    return LoadableInitializer(loadableOptions);
-  } // This will only be rendered on the server side
-
-
-  return function () {
-    return _react.default.createElement(loadableOptions.loading, {
-      error: null,
-      isLoading: true,
-      pastDelay: false,
-      timedOut: false
-    });
-  };
-}
-
-function DefaultLoading() {
-  return _react.default.createElement("p", null, "loading...");
-}
-
-function dynamic(dynamicOptions, options) {
-  var loadableFn = _loadable.default;
-  var loadableOptions = {
-    // A loading component is not required, so we default it
-    loading: function loading(_ref) {
-      var error = _ref.error,
-          isLoading = _ref.isLoading;
-
-      if (true) {
-        if (isLoading) {
-          return _react.default.createElement(DefaultLoading, null);
-        }
-
-        if (error) {
-          return _react.default.createElement("p", null, error.message, _react.default.createElement("br", null), error.stack);
-        }
-      }
-
-      return _react.default.createElement(DefaultLoading, null);
-    } // Support for direct import(), eg: dynamic(import('../hello-world'))
-    // Note that this is only kept for the edge case where someone is passing in a promise as first argument
-    // The react-loadable babel plugin will turn dynamic(import('../hello-world')) into dynamic(() => import('../hello-world'))
-    // To make sure we don't execute the import without rendering first
-
-  };
-
-  if (typeof dynamicOptions.then === 'function') {
-    loadableOptions.loader = function () {
-      return dynamicOptions;
-    }; // Support for having import as a function, eg: dynamic(() => import('../hello-world'))
-
-  } else if (typeof dynamicOptions === 'function') {
-    loadableOptions.loader = dynamicOptions; // Support for having first argument being options, eg: dynamic({loader: import('../hello-world')})
-  } else if ((0, _typeof2.default)(dynamicOptions) === 'object') {
-    loadableOptions = (0, _objectSpread2.default)({}, loadableOptions, dynamicOptions);
-  } // Support for passing options, eg: dynamic(import('../hello-world'), {loading: () => <p>Loading something</p>})
-
-
-  loadableOptions = (0, _objectSpread2.default)({}, loadableOptions, options); // Support for `render` when using a mapping, eg: `dynamic({ modules: () => {return {HelloWorld: import('../hello-world')}, render(props, loaded) {} } })
-
-  if (dynamicOptions.render) {
-    loadableOptions.render = function (loaded, props) {
-      return dynamicOptions.render(props, loaded);
-    };
-  } // Support for `modules` when using a mapping, eg: `dynamic({ modules: () => {return {HelloWorld: import('../hello-world')}, render(props, loaded) {} } })
-
-
-  if (dynamicOptions.modules) {
-    loadableFn = _loadable.default.Map;
-    var loadModules = {};
-    var modules = dynamicOptions.modules();
-    (0, _keys.default)(modules).forEach(function (key) {
-      var value = modules[key];
-
-      if (typeof value.then === 'function') {
-        loadModules[key] = function () {
-          return value.then(function (mod) {
-            return mod.default || mod;
-          });
-        };
-
-        return;
-      }
-
-      loadModules[key] = value;
-    });
-    loadableOptions.loader = loadModules;
-  } // coming from build/babel/plugins/react-loadable-plugin.js
-
-
-  if (loadableOptions.loadableGenerated) {
-    loadableOptions = (0, _objectSpread2.default)({}, loadableOptions, loadableOptions.loadableGenerated);
-    delete loadableOptions.loadableGenerated;
-  } // support for disabling server side rendering, eg: dynamic(import('../hello-world'), {ssr: false})
-
-
-  if (typeof loadableOptions.ssr === 'boolean') {
-    if (!loadableOptions.ssr) {
-      delete loadableOptions.ssr;
-      return noSSR(loadableFn, loadableOptions);
-    }
-
-    delete loadableOptions.ssr;
-  }
-
-  return loadableFn(loadableOptions);
-}
-
-/***/ }),
-
 /***/ "./node_modules/next/dist/lib/head.js":
 /*!********************************************!*\
   !*** ./node_modules/next/dist/lib/head.js ***!
@@ -6322,398 +5956,6 @@ if (true) {
 
 var _default = Link;
 exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/lib/loadable.js":
-/*!************************************************!*\
-  !*** ./node_modules/next/dist/lib/loadable.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
-
-var _isArray = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/array/is-array */ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js"));
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/createClass.js"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/possibleConstructorReturn.js"));
-
-var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/getPrototypeOf.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/inherits.js"));
-
-var _assertThisInitialized2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/assertThisInitialized.js"));
-
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/defineProperty.js"));
-
-var _getIterator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/get-iterator */ "./node_modules/@babel/runtime-corejs2/core-js/get-iterator.js"));
-
-var _assign = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js"));
-
-var _promise = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js"));
-
-var _keys = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js"));
-
-var _map = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/map */ "./node_modules/@babel/runtime-corejs2/core-js/map.js"));
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
-
-/**
-@copyright (c) 2017-present James Kyle <me@thejameskyle.com>
- MIT License
- Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-"Software"), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
- The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
-*/
-// https://github.com/jamiebuilds/react-loadable/blob/v5.5.0/src/index.js
-// Modified to be compatible with webpack 4 / Next.js
-var ALL_INITIALIZERS = [];
-var READY_INITIALIZERS = new _map.default();
-var initialized = false;
-
-function load(loader) {
-  var promise = loader();
-  var state = {
-    loading: true,
-    loaded: null,
-    error: null
-  };
-  state.promise = promise.then(function (loaded) {
-    state.loading = false;
-    state.loaded = loaded;
-    return loaded;
-  }).catch(function (err) {
-    state.loading = false;
-    state.error = err;
-    throw err;
-  });
-  return state;
-}
-
-function loadMap(obj) {
-  var state = {
-    loading: false,
-    loaded: {},
-    error: null
-  };
-  var promises = [];
-
-  try {
-    (0, _keys.default)(obj).forEach(function (key) {
-      var result = load(obj[key]);
-
-      if (!result.loading) {
-        state.loaded[key] = result.loaded;
-        state.error = result.error;
-      } else {
-        state.loading = true;
-      }
-
-      promises.push(result.promise);
-      result.promise.then(function (res) {
-        state.loaded[key] = res;
-      }).catch(function (err) {
-        state.error = err;
-      });
-    });
-  } catch (err) {
-    state.error = err;
-  }
-
-  state.promise = _promise.default.all(promises).then(function (res) {
-    state.loading = false;
-    return res;
-  }).catch(function (err) {
-    state.loading = false;
-    throw err;
-  });
-  return state;
-}
-
-function resolve(obj) {
-  return obj && obj.__esModule ? obj.default : obj;
-}
-
-function render(loaded, props) {
-  return _react.default.createElement(resolve(loaded), props);
-}
-
-function createLoadableComponent(loadFn, options) {
-  var _class, _temp;
-
-  var opts = (0, _assign.default)({
-    loader: null,
-    loading: null,
-    delay: 200,
-    timeout: null,
-    render: render,
-    webpack: null,
-    modules: null
-  }, options);
-  var res = null;
-
-  function init() {
-    if (!res) {
-      res = loadFn(opts.loader);
-    }
-
-    return res.promise;
-  } // Server only
-
-
-  if (typeof window === 'undefined') {
-    ALL_INITIALIZERS.push(init);
-  } // Client only
-
-
-  if (!initialized && typeof window !== 'undefined' && typeof opts.webpack === 'function') {
-    var moduleIds = opts.webpack();
-    var _iteratorNormalCompletion = true;
-    var _didIteratorError = false;
-    var _iteratorError = undefined;
-
-    try {
-      for (var _iterator = (0, _getIterator2.default)(moduleIds), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-        var moduleId = _step.value;
-        READY_INITIALIZERS.set(moduleId, function () {
-          return init();
-        });
-      }
-    } catch (err) {
-      _didIteratorError = true;
-      _iteratorError = err;
-    } finally {
-      try {
-        if (!_iteratorNormalCompletion && _iterator.return != null) {
-          _iterator.return();
-        }
-      } finally {
-        if (_didIteratorError) {
-          throw _iteratorError;
-        }
-      }
-    }
-  }
-
-  return _temp = _class =
-  /*#__PURE__*/
-  function (_React$Component) {
-    (0, _inherits2.default)(LoadableComponent, _React$Component);
-
-    function LoadableComponent(props) {
-      var _this;
-
-      (0, _classCallCheck2.default)(this, LoadableComponent);
-      _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(LoadableComponent).call(this, props));
-      (0, _defineProperty2.default)((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)), "retry", function () {
-        _this.setState({
-          error: null,
-          loading: true,
-          timedOut: false
-        });
-
-        res = loadFn(opts.loader);
-
-        _this._loadModule();
-      });
-      init();
-      _this.state = {
-        error: res.error,
-        pastDelay: false,
-        timedOut: false,
-        loading: res.loading,
-        loaded: res.loaded
-      };
-      return _this;
-    }
-
-    (0, _createClass2.default)(LoadableComponent, [{
-      key: "componentWillMount",
-      value: function componentWillMount() {
-        this._mounted = true;
-
-        this._loadModule();
-      }
-    }, {
-      key: "_loadModule",
-      value: function _loadModule() {
-        var _this2 = this;
-
-        if (this.context.loadable && (0, _isArray.default)(opts.modules)) {
-          opts.modules.forEach(function (moduleName) {
-            _this2.context.loadable.report(moduleName);
-          });
-        }
-
-        if (!res.loading) {
-          return;
-        }
-
-        if (typeof opts.delay === 'number') {
-          if (opts.delay === 0) {
-            this.setState({
-              pastDelay: true
-            });
-          } else {
-            this._delay = setTimeout(function () {
-              _this2.setState({
-                pastDelay: true
-              });
-            }, opts.delay);
-          }
-        }
-
-        if (typeof opts.timeout === 'number') {
-          this._timeout = setTimeout(function () {
-            _this2.setState({
-              timedOut: true
-            });
-          }, opts.timeout);
-        }
-
-        var update = function update() {
-          if (!_this2._mounted) {
-            return;
-          }
-
-          _this2.setState({
-            error: res.error,
-            loaded: res.loaded,
-            loading: res.loading
-          });
-
-          _this2._clearTimeouts();
-        };
-
-        res.promise.then(function () {
-          update();
-        }) // eslint-disable-next-line handle-callback-err
-        .catch(function (err) {
-          update();
-        });
-      }
-    }, {
-      key: "componentWillUnmount",
-      value: function componentWillUnmount() {
-        this._mounted = false;
-
-        this._clearTimeouts();
-      }
-    }, {
-      key: "_clearTimeouts",
-      value: function _clearTimeouts() {
-        clearTimeout(this._delay);
-        clearTimeout(this._timeout);
-      }
-    }, {
-      key: "render",
-      value: function render() {
-        if (this.state.loading || this.state.error) {
-          return _react.default.createElement(opts.loading, {
-            isLoading: this.state.loading,
-            pastDelay: this.state.pastDelay,
-            timedOut: this.state.timedOut,
-            error: this.state.error,
-            retry: this.retry
-          });
-        } else if (this.state.loaded) {
-          return opts.render(this.state.loaded, this.props);
-        } else {
-          return null;
-        }
-      }
-    }], [{
-      key: "preload",
-      value: function preload() {
-        return init();
-      }
-    }]);
-    return LoadableComponent;
-  }(_react.default.Component), (0, _defineProperty2.default)(_class, "contextTypes", {
-    loadable: _propTypes.default.shape({
-      report: _propTypes.default.func.isRequired
-    })
-  }), _temp;
-}
-
-function Loadable(opts) {
-  return createLoadableComponent(load, opts);
-}
-
-function LoadableMap(opts) {
-  if (typeof opts.render !== 'function') {
-    throw new Error('LoadableMap requires a `render(loaded, props)` function');
-  }
-
-  return createLoadableComponent(loadMap, opts);
-}
-
-Loadable.Map = LoadableMap;
-
-function flushInitializers(initializers) {
-  var promises = [];
-
-  while (initializers.length) {
-    var init = initializers.pop();
-    promises.push(init());
-  }
-
-  return _promise.default.all(promises).then(function () {
-    if (initializers.length) {
-      return flushInitializers(initializers);
-    }
-  });
-}
-
-Loadable.preloadAll = function () {
-  return new _promise.default(function (resolve, reject) {
-    flushInitializers(ALL_INITIALIZERS).then(resolve, reject);
-  });
-};
-
-Loadable.preloadReady = function (webpackIds) {
-  return new _promise.default(function (resolve, reject) {
-    var initializers = webpackIds.reduce(function (allInitalizers, moduleId) {
-      var initializer = READY_INITIALIZERS.get(moduleId);
-
-      if (!initializer) {
-        return allInitalizers;
-      }
-
-      allInitalizers.push(initializer);
-      return allInitalizers;
-    }, []);
-    initialized = true; // Make sure the object is cleared
-
-    READY_INITIALIZERS.clear(); // We always will resolve, errors should be handled within loading UIs.
-
-    flushInitializers(initializers).then(resolve, resolve);
-  });
-};
-
-module.exports = Loadable;
 
 /***/ }),
 
@@ -8295,18 +7537,6 @@ function getURL() {
   var origin = getLocationOrigin();
   return href.substring(origin.length);
 }
-
-/***/ }),
-
-/***/ "./node_modules/next/dynamic.js":
-/*!**************************************!*\
-  !*** ./node_modules/next/dynamic.js ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! ./dist/lib/dynamic */ "./node_modules/next/dist/lib/dynamic.js")
-
 
 /***/ }),
 
@@ -11813,10 +11043,10 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./pages/post.js":
-/*!***********************!*\
-  !*** ./pages/post.js ***!
-  \***********************/
+/***/ "./pages/about.js":
+/*!************************!*\
+  !*** ./pages/about.js ***!
+  \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -11828,12 +11058,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _component_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../component/container */ "./component/container.js");
 /* harmony import */ var _modules_language__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/language */ "./modules/language.js");
 /* harmony import */ var _component_no_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../component/no-data */ "./component/no-data.js");
-/* harmony import */ var url__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! url */ "./node_modules/url/url.js");
-/* harmony import */ var url__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(url__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../config */ "./config.js");
-/* harmony import */ var _data_detail__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../data/detail */ "./data/detail/index.js");
-/* harmony import */ var _data_meta__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../data/meta */ "./data/meta/index.js");
-var _jsxFileName = "/Users/KhanhTran/Projects/my-blog/pages/post.js";
+var _jsxFileName = "/Users/KhanhTran/Projects/my-blog/pages/about.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -11858,79 +11083,43 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-
-
-
-
 var _default =
 /*#__PURE__*/
 function (_React$Component) {
   _inherits(_default, _React$Component);
 
-  function _default(props) {
-    var _this;
-
+  function _default() {
     _classCallCheck(this, _default);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(_default).call(this, props));
-    _this.state = {
-      content: null,
-      meta: {}
-    };
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(_default).apply(this, arguments));
   }
 
   _createClass(_default, [{
     key: "componentDidMount",
-    value: function componentDidMount() {
-      var myUrl = url__WEBPACK_IMPORTED_MODULE_4___default.a.parse(window.location.href);
-      console.log(myUrl.pathname);
-      console.log('local path', _config__WEBPACK_IMPORTED_MODULE_5__["default"].PATH.POST); //Get id of target post
-
-      var query = myUrl.search;
-      var regex = /id=[0-9]*/g;
-      var idString = query.match(regex)[0];
-      var id = idString.slice(3, idString.length);
-      console.log(query);
-      console.log('Get information of post has id', id); //Get data of target post
-
-      var content = _data_detail__WEBPACK_IMPORTED_MODULE_6__["default"].getDetail(id);
-      var meta = _data_meta__WEBPACK_IMPORTED_MODULE_7__["default"].getPost(id);
-      console.log('data', content, meta);
-
-      if (content && meta) {
-        this.setState({
-          meta: meta,
-          content: content
-        });
-      } else {
-        console.log('error', content, meta);
-        this.setState({
-          meta: {
-            name: _modules_language__WEBPACK_IMPORTED_MODULE_2__["default"].t('title_error')
-          },
-          content: null
-        });
-      }
-    }
+    value: function componentDidMount() {}
   }, {
     key: "render",
     value: function render() {
-      var title = this.state.meta.name ? this.state.meta.name : _modules_language__WEBPACK_IMPORTED_MODULE_2__["default"].t('default_post_name');
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 13
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_container__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        title: title,
+        title: _modules_language__WEBPACK_IMPORTED_MODULE_2__["default"].t('about_me'),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 14
         },
         __self: this
-      }, this.state.content));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_no_data__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
+        },
+        __self: this
+      })));
     }
   }]);
 
@@ -11954,21 +11143,21 @@ function (_React$Component) {
           next.router.update(r, Component)
         }
       }
-    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/post")
+    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/about")
   
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
 
 /***/ }),
 
 /***/ 4:
-/*!*****************************!*\
-  !*** multi ./pages/post.js ***!
-  \*****************************/
+/*!******************************!*\
+  !*** multi ./pages/about.js ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__NEXT_REGISTER_PAGE('/post', function() {
-module.exports = __webpack_require__(/*! ./pages/post.js */"./pages/post.js");
+__NEXT_REGISTER_PAGE('/about', function() {
+module.exports = __webpack_require__(/*! ./pages/about.js */"./pages/about.js");
 
 return { page: module.exports.default }});
 
@@ -11986,4 +11175,4 @@ module.exports = dll_5d62d38be3592dca3a42;
 /***/ })
 
 },[[4,"static/runtime/webpack.js"]]]));;
-//# sourceMappingURL=post.js.map
+//# sourceMappingURL=about.js.map
